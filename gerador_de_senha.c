@@ -67,10 +67,18 @@ void passwd(){
    
 void passwd8(){
 	srand(time(NULL));
-	unsigned int num = rand() % 26;
-	char low_letter = 'a' + num;
-	unsigned int num1 = rand() % 26;
-	char up_letter = 'A' + num1;
-	printf("%u%s%u%s\n" , num , low_letter , num1 , up_letter);
-
+	char passwd[9];
+	for(int i = 0; i < 9; i++){
+		unsigned int num = rand() % 26;
+		char low_letter = 'a' + num;
+		unsigned int num1 = rand() % 26;
+		char up_letter = 'A' + num1;
+	}
+	if(i % 2 == 0){
+		passwd[i] = low_letter;
+	}
+	else{
+		passwd[i] = up_letter;
+	}
+	printf("%s" , passwd);
 }
