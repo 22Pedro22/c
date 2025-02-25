@@ -5,6 +5,7 @@
 
 void email();
 void passwd();
+void passwd8();
 
 int main(){
         unsigned short int choice;
@@ -58,6 +59,18 @@ void passwd(){
         printf("[3] 32 Caracteres\n");
         printf("> ");
         scanf("%hu" , &choice);
+	if(choice == 1){
+		passwd8();
+	}
 
 }
    
+void passwd8(){
+	srand(time(NULL));
+	unsigned int num = rand() % 26;
+	char low_letter = 'a' + num;
+	unsigned int num1 = rand() % 26;
+	char up_letter = 'A' + num1;
+	printf("%u%s%u%s\n" , num , low_letter , num1 , up_letter);
+
+}
